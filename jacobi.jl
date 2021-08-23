@@ -59,18 +59,18 @@ function jacobi_error_vs_iterations(numiter, numelements, wavenumber)
     return err
 end
 
-numelements = [4, 8, 16, 32]
-numiter = numelements .^ 2
-wavenumber = 2pi
-err = [
-    jacobi_error_vs_iterations(numiter[i], numelements[i], wavenumber) for
-    i = 1:length(numelements)
-]
-
-
-using Plots
-plot( err[1], yscale = :log10, label = string(numelements[1]))
-plot!(err[2], yscale = :log10, label = string(numelements[2]))
-plot!(err[3], yscale = :log10, label = string(numelements[3]))
-plot!(err[4], yscale = :log10, label = string(numelements[4]))
-plot!(err[5], yscale = :log10, label = string(numelements[5]))
+# numelements = [4, 8, 16, 32]
+# numiter = numelements .^ 2
+# wavenumber = 2pi
+# err = [
+#     jacobi_error_vs_iterations(numiter[i], numelements[i], wavenumber) for
+#     i = 1:length(numelements)
+# ]
+#
+#
+# using Plots
+# plot( err[1], yscale = :log10, label = string(numelements[1]))
+# plot!(err[2], yscale = :log10, label = string(numelements[2]))
+# plot!(err[3], yscale = :log10, label = string(numelements[3]))
+# plot!(err[4], yscale = :log10, label = string(numelements[4]))
+# plot!(err[5], yscale = :log10, label = string(numelements[5]))
